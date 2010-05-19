@@ -1,0 +1,29 @@
+Enseniar un lenguaje NO
+	-No es el objetivo de la herramienta
+		-nos importan los conceptos
+		-decirle a una persona que le enseñas java con objetos, primero q no es compatible:
+			-Java no es objetos puro, tiene caracteristicas "especiales"
+			-Alguien que no tiene base aprende Java NO la teoria, se acostrumbra a sus limitaciones y no abstrae conceptos como simple implementacion
+	-No seria util con esta herramienta
+		-los entornos de desarrollo no se asemejan a lo q es Loop
+	-Seria muchisimo mas util enseñar el lenguaje, DESPUES de la teoria basica en el entorno de desarrollo REAL, sigamos con el ejemplo de Java: brindemos una capacitacion donde se enseñe manejo del Eclipse, con herramientas que se usan para desarrollar y se integran con esa herramienta: subversion, maven, plugins recomendados, etc
+
+Como solucion intermedia podemos plantear:
+	-Presentar un plan de como seguir capacitando a alguien post LOOP. Pero para esto hay q tener en cuenta:
+		-Lenguaje que se va a enseñar, en todo caso podriamos hacer un top 3 de los lenguajes mas usados, y a su vez implica
+			-Investigar el lenguaje
+			-Verificar IDEs mas usados
+			-Seleccionar herramientas adicionales
+		-Programa de la capacitacion
+
+
+PERO a su vez, nos damos cuenta que hay lenguajes que tienen caracteristicas que implican conceptos que nos gustaria agregar, como por ejemplo chequeo de tipos ==> q sea un objetivo del PRODUCTO. Pero NO entra en este proyecto pq:
+	-desarrollo complejo
+		-motor de inferencia de tipos
+		-motor de chequeo de tipos
+		-construccion de compilador
+	-definir pedagogia para introducir el concepto de tipo (VERY DIFICIL)
+		-como lo queremos enseniar
+			-concepto de tipo
+			-jerarquia
+		-como deberia de funcionar en la herramienta
