@@ -1,4 +1,4 @@
-Enseniar un lenguaje NO
+Enseñar un lenguaje NO
 	-No es el objetivo de la herramienta
 		-nos importan los conceptos
 		-decirle a una persona que le enseñas java con objetos, primero q no es compatible:
