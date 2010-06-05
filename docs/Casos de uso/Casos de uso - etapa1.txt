@@ -1,28 +1,12 @@
-
 Iniciar loop
 
-crear <ALGO>
+crear <ALGO ESTA HECHO EL OBJETO QUE ES LA BASE>
 	donde los algos son:
 		- objeto <done>
-		- variable
+		- variable (en realidad es agregar variable a un objeto)
 		- mensaje
 		- clonar
 		
-	PASOS
-		1) Posicionarse en el panel <PANEL DONDE SE VA A CREAR ESE ALGO>
-		2) Hacer boton derecho 
-		3) Seleccionar "crear/agregar nuevo <ALGO>"
-		4) Darle nombre
-		5) Aceptar (VALIDA)
-		6) Pantalla con el nuevo <ALGO> en <PANEL DONDE SE VA A ESTAR ESE ALGO>
-		
-	CAMINO ALTERNATIVO
-		>> No pasa la validacion SOLO porque ya existe el nombre en el scope
-		5.1) elijo un nuevo nombre
-		5.2) volver al paso 4
-
-		
-	
 modificar un objeto
 	agregar atributo (crear atributo dentro del objeto)
 	modificar nombre
@@ -39,21 +23,12 @@ modificar un objeto
 		styling (colorcitos)
 	
 
-borrar un objeto
-	- si esta referenciado por alguien que me diga, no, esta referenciado no podes
-	- si tiene clones no se puede borrar
+Desreferenciar objetos
+	- no se borran objetos se DESREFERENCIAN (Guille o German lo especifican y lo desarrollan)
 
 colecciones
-	crear coleccion
-		(agregar el paso seleccionar tipo o directamente crear conjunto, crear ordenada)
+	crear coleccion (clonar el set)
 	agregar coleccion a un objeto ya creado
 	
 escribir codigo en el workspace	
-
-
-
-
-
-
-
 
