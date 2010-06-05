@@ -1,0 +1,59 @@
+
+Iniciar loop
+
+crear <ALGO>
+	donde los algos son:
+		- objeto <done>
+		- variable
+		- mensaje
+		- clonar
+		
+	PASOS
+		1) Posicionarse en el panel <PANEL DONDE SE VA A CREAR ESE ALGO>
+		2) Hacer boton derecho 
+		3) Seleccionar "crear/agregar nuevo <ALGO>"
+		4) Darle nombre
+		5) Aceptar (VALIDA)
+		6) Pantalla con el nuevo <ALGO> en <PANEL DONDE SE VA A ESTAR ESE ALGO>
+		
+	CAMINO ALTERNATIVO
+		>> No pasa la validacion SOLO porque ya existe el nombre en el scope
+		5.1) elijo un nuevo nombre
+		5.2) volver al paso 4
+
+		
+	
+modificar un objeto
+	agregar atributo (crear atributo dentro del objeto)
+	modificar nombre
+	agregar un metodo (crear un mensaje)
+		/*si tuviesemos informacion de tipos es mucho mas inteligente todo el autocompletar y toda la sugerencia q me da*/
+		cuando escribo un metodo que se valide:
+			(cuando lo termino de escribir) si la variable no esta que me ofrezca crearla 
+				como variable del objeto
+				como variable temporal
+			--(cuando lo termino de escribir) si un selector que uso no esta me deja guardar y no pregunta nada. Hoy en dia manda pop up, no sabemos si sacarlo o dejarlo es facil, no lo especificamos queda en el limbo y si es facil lo cambiamos sino saraza
+			(todo el tiempo) autocomplete 
+				selectores
+				variables (objeto, locales y parametros)
+		styling (colorcitos)
+	
+
+borrar un objeto
+	- si esta referenciado por alguien que me diga, no, esta referenciado no podes
+	- si tiene clones no se puede borrar
+
+colecciones
+	crear coleccion
+		(agregar el paso seleccionar tipo o directamente crear conjunto, crear ordenada)
+	agregar coleccion a un objeto ya creado
+	
+escribir codigo en el workspace	
+
+
+
+
+
+
+
+
