@@ -4,8 +4,9 @@ crear <ALGO ESTA HECHO EL OBJETO QUE ES LA BASE>
 	donde los algos son:
 		- objeto <done>
 		- variable (en realidad es agregar variable a un objeto)
+			*coleccion <done>
 		- mensaje
-		- clonar
+		- clonar <done>
 		
 modificar un objeto
 	agregar atributo (crear atributo dentro del objeto)
@@ -27,8 +28,8 @@ Desreferenciar objetos
 	- no se borran objetos se DESREFERENCIAN (Guille o German lo especifican y lo desarrollan)
 
 colecciones
-	crear coleccion (clonar el set)
-	agregar coleccion a un objeto ya creado
+	crear coleccion (clonar el set) 
+	agregar coleccion a un objeto ya creado <done>
 	
 escribir codigo en el workspace	
 
