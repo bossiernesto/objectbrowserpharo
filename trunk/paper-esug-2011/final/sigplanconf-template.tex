@@ -1,35 +1,11 @@
-%-----------------------------------------------------------------------------
-%
-%               Template for sigplanconf LaTeX Class
-%
-% Name:         sigplanconf-template.tex
-%
-% Purpose:      A template for sigplanconf.cls, which is a LaTeX 2e class
-%               file for SIGPLAN conference proceedings.
-%
-% Author:       Paul C. Anagnostopoulos
-%               Windfall Software
-%               978 371-2316
-%               paul@windfall.com
-%
-% Created:      15 February 2005
-%
-%-----------------------------------------------------------------------------
-
-
 \documentclass{sigplanconf}
-
-% The following \documentclass options may be useful:
-%
-% 10pt          To set in 10-point type instead of 9-point.
-% 11pt          To set in 11-point type instead of 9-point.
-% authoryear    To obtain author/year citation style instead of numeric.
 
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 
 \begin{document}
+\newcommand{\fig}[1]{(fig. \ref{fig:#1})}
 
 \conferenceinfo{ESUG '05}{August 22nd 2011, Edimburgh.} 
 \copyrightyear{2011} 
@@ -74,7 +50,8 @@ Educational programming environments, object-oriented programming, teaching meth
 
 \section{Introduction}
 
-Frequently, in introductory courses to OOP, students come with prior programming experience. This is often counter-productive when understanding some of the basic concepts of the OOP paradigm, such as the relationship between a class and its instances, the difference between object and reference, delegation and polymorphism \cite{Weir05}. In order to minimize this difficulty, a possible strategy is to postpone the introduction of the class concept. This reduces the set of concepts needed to build programs \cite{Lomb07}. 
+Frequently, in introductory courses to OOP, students have prior experience in structured programming. 
+This is often counter-productive when understanding some of the basic concepts of the OOP paradigm, such as the relationship between a class and its instances, the difference between object and reference, delegation and polymorphism \cite{Weir05}. In order to minimize this difficulty, a possible strategy is to postpone the introduction of the class concept. This reduces the set of concepts needed to build programs \cite{Lomb07}. 
 
 Similiar difficulties appear in students who do not have prior knowledge in programming at the time of learning OOP, and specially in those cases it is convinient to bring down any complexity that a language might have in order to understand the ideas the paradigm proposes \cite{Vent04}.
 
@@ -83,7 +60,8 @@ Moreover, it has to offer facilities to understand the concepts of environment, 
 
 \section{Proposed programming environment}
 
-Below we present the features we consider a software tool like the one mentioned above should include, stating which common learning difficulties are to be prevented when introducing the OOP paradigm to students. 
+In this section we describe the features for a programming environment which helps our objectives, 
+stating which common learning difficulties have to be prevented when introducing the OOP paradigm to students. 
 
 \subsection{Multiple object environments - lessons}
 
@@ -127,8 +105,6 @@ In order to help understanding how the garbage collector works \cite{Hert05}, we
 The proposed approach is centered on using the object diagram to illustrate the different stages an object goes through until it is collected. Once an object is not referenced by any other object, it should not disappear of the environment automatically, and in the object diagram it should appear isolated from the rest of the lesson's object graph, standing out as an object likely to be collected. This way, the student can see clearly that there are no references pointing to it. A garbage collection can be explicitly run at any time removing every unreferenced object from the lesson's environment and the object diagram as well.
 
 \section{Implementations}
-
-\newcommand{\fig}[1]{[Figure \ref{fig:#1}]}
 
 The first implementation of a tool based on the proposed style was an add-on for the Dolphin Smalltalk\footnote{Object Arts Dolphin Smalltalk: http://www.object-arts.com/} environment which allowed the creation of objects without using classes and had a workspace to interact with them \cite{Lomb07}.  We used that first implementation to put in practice the idea of delaying the introduction of the class concept, and it was also useful as a model for the next implementations.
 
@@ -177,7 +153,7 @@ Finally, there are some improvements to be made to the user interface, such as s
 
 \acks
 
-Carlos Lombardi and Leonardo Cesario collaborated in the first implementation of the programming environment. Also, many of the teachers and students of the subjects of \textit{Programming Paradigms} at UTN and \textit{Computers II} at UNQ gave us great help by testing our tools, reporting bugs and proposing new ideas. Gabriela Arévalo and Victoria Griggio helped us in the writing of this paper.
+Carlos Lombardi and Leonardo Cesario collaborated in the first implementation of the programming environment. Also, many of the teachers and students of the subjects of \textit{Programming Paradigms} at UTN and \textit{Computers II} at UNQ gave us great help by testing our tools, reporting bugs and proposing new ideas. Gabriela Arévalo, Victoria Griggio and Débora Fortini helped us in the writing of this paper.
 
 \nocite{Libe11,Mich00,Kouz07,Shan06,Shch95}
 % We recommend abbrvnat bibliography style.
