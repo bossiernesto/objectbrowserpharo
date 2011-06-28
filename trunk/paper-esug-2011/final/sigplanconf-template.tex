@@ -128,11 +128,23 @@ The proposed approach is centered on using the object diagram to illustrate the 
 
 \section{Implementations}
 
+\newcommand{\fig}[1]{[Figure \ref{fig:#1}]}
+
 The first implementation of a tool based on the proposed style was an add-on for the Dolphin Smalltalk\footnote{Object Arts Dolphin Smalltalk: http://www.object-arts.com/} environment which allowed the creation of objects without using classes and had a workspace to interact with them \cite{Lomb07}.  We used that first implementation to put in practice the idea of delaying the introduction of the class concept, and it was also useful as a model for the next implementations.
 
 Nowadays, there is a new version of that tool built on top of Pharo Smalltalk\footnote{Pharo Smalltalk: http://www.pharo-project.org/} named LOOP  (Learning Object Oriented Programming) implementing the first versions of the features described above \cite{Lomb07}.
-The main menu of LOOP is a Lesson Browser [Figure 1], where lessons can be created, opened, deleted, exported to a file for sharing and imported back in the Pharo image. Exporting and importing a lesson is very useful for the teacher to evaluate excercises done by the students and also give them prebuilt lessons.
-To create objects and references inside a lesson, the user has to use the object browser, which shows every reference and object created in the lesson environment. Selecting a reference from the menu brings up the object inspection window for the object that it points to, where the user can browse and define its attributes and methods [Figure 2]. 
+The main menu of LOOP is a Lesson Browser \fig{lessonBrowser}, where lessons can be created, opened, deleted, exported to a file for sharing and imported back in the Pharo image. Exporting and importing a lesson is very useful for the teacher to evaluate excercises done by the students and also give them prebuilt lessons.
+
+To create objects and references inside a lesson, the user has to use the object browser, which shows every reference and object created in the lesson environment. Selecting a reference from the menu brings up the object inspection window for the object that it points to, where the user can browse and define its attributes and methods \fig{objectBrowser}. 
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/objectBrowser.png}
+ % objectBrowser.png: 657x328 pixel, 72dpi, 23.17x11.57 cm, bb=0 0 657 328
+ \caption{ObjectBrowser}
+ \label{fig:objectBrowser}
+\end{figure}
+
 A live object diagram shows the state of a lesson’s environment and it is updated after every action that affects the environment state, i.e. addition or deletion of attributes of an object, message sends with side effects, creation of new objects, garbage collection, etc. [Figure 3].
 The user can define many workspaces with different scenarios of interaction with the objects within the lesson [Figure 4]. 
 The explicit garbage collection mechanism is illustrated with a Garbage Bin metaphore. Candidates for collection can be easily found in the object diagram because they would have no arrows pointing at them, and the Garbage Bin lists those same unreferenced objects [Figure 5]. When the Garbage Bin is emptied, those unreferenced objects are deleted from the environment and dissappear from the object diagram [Figure 6].
@@ -163,20 +175,6 @@ After a message is sent, a debugger view can be used like a video player, with p
 
 Finally, there are some improvements to be made to the user interface, such as shortcuts, code completion, improved menues or internationalization. Currently the tool is only available in spanish, we want to make it configurable to add more languages as necessary.
 
-\appendix
-\section{Figures}
-
-This is the text of the appendix, if you need one. \ref{fig:objectBrowser}
-
-\begin{figure}[h]
- \centering
- \includegraphics[scale=.35]{./images/objectBrowser.png}
- % objectBrowser.png: 657x328 pixel, 72dpi, 23.17x11.57 cm, bb=0 0 657 328
- \caption{ObjectBrowser}
- \label{fig:objectBrowser}
-\end{figure}
-
-
 \acks
 
 Carlos Lombardi and Leonardo Cesario collaborated in the first implementation of the programming environment. Also, many of the teachers and students of the subjects of \textit{Programming Paradigms} at UTN and \textit{Computers II} at UNQ gave us great help by testing our tools, reporting bugs and proposing new ideas. Gabriela Arévalo and Victoria Griggio helped us in the writing of this paper.
@@ -185,16 +183,143 @@ Carlos Lombardi and Leonardo Cesario collaborated in the first implementation of
 % We recommend abbrvnat bibliography style.
 
 \bibliographystyle{abbrvnat}
-\bibliography{loop}
+%\bibliography{loop}
 
-% The bibliography should be embedded for final submission.
+\begin{thebibliography}{}
+\softraggedright
 
-% \begin{thebibliography}{}
-% \softraggedright
-% 
-% \bibitem[Smith et~al.(2009)Smith, Jones]{smith02}
-% P. Q. Smith, and X. Y. Jones. ...reference text...
-% 
-% \end{thebibliography}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bennedsen and Schulte(2010)]{Benn10}
+J.~Bennedsen and C.~Schulte.
+\newblock Bluej visual debugger for learning the execution of object-oriented
+  programs?
+\newblock \emph{Trans. Comput. Educ.}, 10:\penalty0 8:1--8:22, June 2010.
+\newblock ISSN 1946-6226.
+\newblock \doi{http://doi.acm.org/10.1145/1789934.1789938}.
+\newblock URL \url{http://doi.acm.org/10.1145/1789934.1789938}.
+
+\bibitem[Hertz and Berger(2005)]{Hert05}
+M.~Hertz and E.~D. Berger.
+\newblock Quantifying the performance of garbage collection vs. explicit memory
+  management.
+\newblock In \emph{Proceedings of the 20th annual ACM SIGPLAN conference on
+  Object-oriented programming, systems, languages, and applications}, OOPSLA
+  '05, pages 313--326, New York, NY, USA, 2005. ACM.
+\newblock ISBN 1-59593-031-0.
+\newblock \doi{http://doi.acm.org/10.1145/1094811.1094836}.
+\newblock URL \url{http://doi.acm.org/10.1145/1094811.1094836}.
+
+\bibitem[Kouznetsova(2007)]{Kouz07}
+S.~Kouznetsova.
+\newblock Using bluej and blackjack to teach object-oriented design concepts in
+  cs1.
+\newblock \emph{J. Comput. Small Coll.}, 22:\penalty0 49--55, April 2007.
+\newblock ISSN 1937-4771.
+\newblock URL \url{http://portal.acm.org/citation.cfm?id=1229637.1229646}.
+
+\bibitem[Liberman et~al.(2011)Liberman, Beeri, and Ben-David~Kolikant]{Libe11}
+N.~Liberman, C.~Beeri, and Y.~Ben-David~Kolikant.
+\newblock Difficulties in learning inheritance and polymorphism.
+\newblock \emph{Trans. Comput. Educ.}, 11:\penalty0 4:1--4:23, February 2011.
+\newblock ISSN 1946-6226.
+\newblock \doi{http://doi.acm.org/1921607.1921611}.
+\newblock URL \url{http://doi.acm.org/1921607.1921611}.
+
+\bibitem[Lombardi et~al.(2007)Lombardi, Passerini, and Cesario]{Lomb07}
+C.~Lombardi, N.~Passerini, and L.~Cesario.
+\newblock Instances and classes in the introduction of object oriented
+  programming.
+\newblock \emph{Smalltalks 2007 -- Primera Conferencia Argentina de Smalltalk},
+  2007.
+
+\bibitem[Madsen(1996)]{Mads96}
+O.~Madsen.
+\newblock Strategic research directions in object-oriented programming.
+\newblock \emph{ACM Comput. Surv.}, 28, December 1996.
+\newblock ISSN 0360-0300.
+\newblock \doi{http://doi.acm.org/10.1145/242224.242424}.
+\newblock URL \url{http://doi.acm.org/10.1145/242224.242424}.
+
+\bibitem[Michiels et~al.(2000)Michiels, Fern\'{a}ndez, B\"{o}rstler, and
+  Prieto]{Mich00}
+I.~Michiels, A.~Fern\'{a}ndez, J.~B\"{o}rstler, and M.~Prieto.
+\newblock Tools and environments for understanding object-oriented concepts.
+\newblock In \emph{Proceedings of the Workshops, Panels, and Posters on
+  Object-Oriented Technology}, ECOOP '00, pages 65--77, London, UK, 2000.
+  Springer-Verlag.
+\newblock ISBN 3-540-41513-0.
+\newblock URL \url{http://portal.acm.org/citation.cfm?id=646780.705783}.
+
+\bibitem[Shanmugasundaram et~al.(2006)Shanmugasundaram, Juell, and
+  Hill]{Shan06}
+V.~Shanmugasundaram, P.~Juell, and C.~Hill.
+\newblock Knowledge building using visualizations.
+\newblock In \emph{Proceedings of the 11th annual SIGCSE conference on
+  Innovation and technology in computer science education}, ITICSE '06, pages
+  23--27, New York, NY, USA, 2006. ACM.
+\newblock ISBN 1-59593-055-8.
+\newblock \doi{http://doi.acm.org/10.1145/1140124.1140134}.
+\newblock URL \url{http://doi.acm.org/10.1145/1140124.1140134}.
+
+\bibitem[Shcherbina et~al.(1995)Shcherbina, Vortman, and Zodik]{Shch95}
+V.~Shcherbina, P.~Vortman, and G.~Zodik.
+\newblock A visual object-oriented development environment (voode).
+\newblock In \emph{Proceedings of the 1995 conference of the Centre for
+  Advanced Studies on Collaborative research}, CASCON '95, pages 57--. IBM
+  Press, 1995.
+\newblock URL \url{http://portal.acm.org/citation.cfm?id=781915.781972}.
+
+\bibitem[Ungar and Smith(2007)]{Unga07}
+D.~Ungar and R.~B. Smith.
+\newblock Self.
+\newblock In \emph{Proceedings of the third ACM SIGPLAN conference on History
+  of programming languages}, HOPL III, pages 9--1--9--50, New York, NY, USA,
+  2007. ACM.
+\newblock ISBN 978-1-59593-766-7.
+\newblock \doi{http://doi.acm.org/10.1145/1238844.1238853}.
+\newblock URL \url{http://doi.acm.org/10.1145/1238844.1238853}.
+
+\bibitem[Utting et~al.(2010)Utting, Cooper, K\"{o}lling, Maloney, and
+  Resnick]{Utti10}
+I.~Utting, S.~Cooper, M.~K\"{o}lling, J.~Maloney, and M.~Resnick.
+\newblock Alice, greenfoot, and scratch -- a discussion.
+\newblock \emph{Trans. Comput. Educ.}, 10:\penalty0 17:1--17:11, November 2010.
+\newblock ISSN 1946-6226.
+\newblock \doi{http://doi.acm.org/10.1145/1868358.1868364}.
+\newblock URL \url{http://doi.acm.org/10.1145/1868358.1868364}.
+
+\bibitem[Ventura and Ramamurthy(2004)]{Vent04}
+P.~Ventura and B.~Ramamurthy.
+\newblock Wanted: Cs1 students. no experience required.
+\newblock In \emph{Proceedings of the 35th SIGCSE technical symposium on
+  Computer science education}, SIGCSE '04, pages 240--244, New York, NY, USA,
+  2004. ACM.
+\newblock ISBN 1-58113-798-2.
+\newblock \doi{http://doi.acm.org/10.1145/971300.971387}.
+\newblock URL \url{http://doi.acm.org/10.1145/971300.971387}.
+
+\bibitem[Weir et~al.(2005)Weir, Vilner, Mendes, and Nordstr\"{o}m]{Weir05}
+G.~R.~S. Weir, T.~Vilner, A.~J. Mendes, and M.~Nordstr\"{o}m.
+\newblock Difficulties teaching java in cs1 and how we aim to solve them.
+\newblock In \emph{Proceedings of the 10th annual SIGCSE conference on
+  Innovation and technology in computer science education}, ITiCSE '05, pages
+  344--345, New York, NY, USA, 2005. ACM.
+\newblock ISBN 1-59593-024-8.
+\newblock \doi{http://doi.acm.org/10.1145/1067445.1067543}.
+\newblock URL \url{http://doi.acm.org/10.1145/1067445.1067543}.
+
+\bibitem[Wilkens(2002)]{Wilk02}
+L.~Wilkens.
+\newblock Objects with prototype-based mechanisms.
+\newblock \emph{J. Comput. Small Coll.}, 17:\penalty0 131--140, February 2002.
+\newblock ISSN 1937-4771.
+\newblock URL \url{http://portal.acm.org/citation.cfm?id=772636.772659}.
+
+\end{thebibliography}
 
 \end{document}
