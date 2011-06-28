@@ -186,7 +186,6 @@ The explicit garbage collection mechanism is illustrated with a Garbage Bin meta
  \caption{Object environment after garbage collection}
  \label{fig:afterGarbageCollection}
 \end{figure}
-
 \section{Experiences}
 
 LOOP was used in university courses and job trainings to put in practice the concepts of polymorfism, object composition and delegation from the start.  Afterwards, the concepts tought in the class was introduced as an alternative to build objects and share and extend their behavior without difficulties.
@@ -206,11 +205,11 @@ The current implementation of LOOP is based on Smalltalk and the syntax used whe
 
 We also want to include a configurable type system. We think that explicit type definitions take the focus away from the most important concepts of the paradigm and should be preferably avoided in introductory courses. Nevertheless, since many object-oriented languages make heavy use of static type-systems with explicit type definitions, a configurable type-system should also be considered.
 
-The current implementation of LOOP offers a limited support for developing unit tests [Figure 7]. This part of the tool should be improved in order to facilitate the use of test-driven development (TDD) from the begining of the course. Since the nature of LOOP programming environment imposes some specific difficulties to build tests without side-effect, a concrete implementation of TDD inside of LOOP is still to be analyzed in depth.
+The current implementation of LOOP offers a limited support for developing unit tests. This part of the tool should be improved in order to facilitate the use of test-driven development (TDD) from the begining of the course. Since the nature of LOOP programming environment imposes some specific difficulties to build tests without side-effect, a concrete implementation of TDD inside of LOOP is still to be analyzed in depth.
 
 We also consider improving both appearance and functionality of the graphical diagrams of LOOP [Figure 3]. Object diagrams should be interactive, allowing the creation of new objects or sending messages from the diagram itself, as an alternative to the workspace and the reference-panel [Figure 2]. Also, sequence and collaboration diagrams would be useful for the comprehension of the dynamic relationships between objects. This kind of diagrams could be inferred from the evaluation of any piece of code, even the execution of tests.
 
-Another subject of research is a ``debugger'' for the tool \cite{Benn10}. We think that a live and powerful debugger \textit{à la Smalltalk} is a rich tool for the understanding of the whole environment behaviour. 
+Another subject of research is a ``debugger'' for the tool \cite{Benn10}. We think that a live and powerful debugger \textit{Smalltalk style} is a rich tool for the understanding of the whole environment behaviour. 
 After a message is sent, a debugger view can be used like a video player, with play, forward and  backward buttons to navigate the message stack and see how the state changes after each message send in the object diagram.
 
 Finally, there are some improvements to be made to the user interface, such as shortcuts, code completion, improved menues or internationalization. Currently the tool is only available in spanish, we want to make it configurable to add more languages as necessary.
