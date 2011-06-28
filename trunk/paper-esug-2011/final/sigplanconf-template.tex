@@ -34,8 +34,6 @@
 
 \begin{abstract}
 This paper describes the features that a programming environment should have in order to help learning the object-oriented programming (OOP) paradigm and let students get the skills needed to build software using objects very quickly. This proposal is centered on providing graphical tools to help understand the concepts of the paradigm and let students create objects before they are presented the class concept \cite{Utti10}. The object, message and reference concepts are considered of primary importance during the teaching process, allowing quick acquisition of both theory and practice of concepts such as delegation, polymorphism and composition \cite{Lomb07}.
-
-
 Additionally, a current implementation of the proposed software and the experience gained so far using it for teaching at universities and work trainings. Finally, we describe possible extensions to the proposed software that are currently under study.
 \end{abstract}
 
@@ -67,6 +65,7 @@ stating which common learning difficulties have to be prevented when introducing
 \subsection{Multiple object environments - lessons}
 
 In order to introduce the concept of object environment we propose using lessons: an object environment associated to a group of objects, the references pointing to them, a workspace to interact with them and an object diagram. Lessons should be independent from each other; none of the elements mentioned above should be shared between different lessons.
+
 The use of lessons also aims to help students organize their work and let the teacher offer environments with pre-existing objects as scenarios for excercises.
 
 \subsection{Defining and using objects}
@@ -78,12 +77,11 @@ than those found in Self \cite{Unga07} or Javascript \cite{Wilk02}. In those lan
 prototypical object is divided in two parts, one containing the behavioral
 slots, which will be shared as a \textit{parent object} among all the cloned
 objects, and another part containing the ``state'' slots, which must be cloned every time a new object is created. In our proposal, the same object servers the two purposes: 
-\begin{enumerate}
+\begin{itemize}
 \item the new object has the same internal structure as the original one. 
 \item the new object has the cloned one as delegate. This means that the new
 object \textit{inherites} all of the behaviour of the original one, but also it can \textit{override} its behaviour by defining methods with the same name.
-\end{enumerate}	
-
+\end{itemize}	
 This simplified prototype approach enables code sharing mechanisms and facilitate the introduction of classes and inheritance in a later stage of the course based on a more classical view of the object-oriented paradigm.
 
 To improve the student’s programming experience, the environment should provide ready-to-use basic prototype objects such as numbers, booleans, collections and dates; in order to do more complex exercises the environment could also include networking, persistency and graphical user interface objects.
@@ -97,19 +95,27 @@ This explicit separation between the created object and a reference pointing to 
 
 A lesson should provide its own object diagram, where one can appreciate
 visually the relationship between living objects in that lesson’s environment.
-This tool makes it easier to get a clearer distinction between the concept of object and reference, and helps to comprehend the state of the environment of the lesson at a given moment. When the student interacts with the objects from a workspace, the diagram shows the state changes while the program executes. This provides a live vision of what happens in the object environment after each message-send. The visual representation of the objects and references in the environment and the ability to folow their changes along with the program execution improves the understanding of some important concepts of the paradigm: like references and object identity.
+This tool makes it easier to get a clearer distinction between the concept of object and reference, and helps to comprehend the state of the environment of the lesson at a given moment. 
+
+When the student interacts with the objects from a workspace, the diagram shows the state changes while the program executes. This provides a live vision of what happens in the object environment after each message-send. 
+
+The visual representation of the objects and references in the environment and the ability to folow their changes along with the program execution improves the understanding of some important concepts of the paradigm: like references and object identity.
 
 \subsection{Garbage Collection}
 
 Students usually want to erase an object from their system and find it odd not to have an explicit way to do so, e.g. sending a message delete, free or dealloc.
+
 In order to help understanding how the garbage collector works \cite{Hert05}, we propose using an explicit mechanism of garbage collection to clarify the conditions that make an object likely to be collected. This way, students are able to observe which objects can be erased and give the explicit order to do so.
+
 The proposed approach is centered on using the object diagram to illustrate the different stages an object goes through until it is collected. Once an object is not referenced by any other object, it should not disappear of the environment automatically, and in the object diagram it should appear isolated from the rest of the lesson's object graph, standing out as an object likely to be collected. This way, the student can see clearly that there are no references pointing to it. A garbage collection can be explicitly run at any time removing every unreferenced object from the lesson's environment and the object diagram as well.
 
 \section{Implementations}
 
 The first implementation of a tool based on the proposed style was an add-on for the Dolphin Smalltalk\footnote{Object Arts Dolphin Smalltalk: http://www.object-arts.com/} environment which allowed the creation of objects without using classes and had a workspace to interact with them \cite{Lomb07}.  We used that first implementation to put in practice the idea of delaying the introduction of the class concept, and it was also useful as a model for the next implementations.
 
+\bigskip
 Nowadays, there is a new version of that tool built on top of Pharo Smalltalk\footnote{Pharo Smalltalk: http://www.pharo-project.org/} named LOOP  (Learning Object Oriented Programming) implementing the first versions of the features described above \cite{Lomb07}.
+
 The main menu of LOOP is a Lesson Browser \fig{figure1}, where lessons can be created, opened, deleted, exported to a file for sharing and imported back in the Pharo image. Exporting and importing a lesson is very useful for the teacher to evaluate excercises done by the students and also give them prebuilt lessons.
 \begin{figure}[h]
  \centering
@@ -133,7 +139,6 @@ A live object diagram shows the state of a lesson’s environment and it is upda
  \caption{Interacting with objects from a workspace}
  \label{fig:workspace}
 \end{figure}
-
 
 The user can define many workspaces with different scenarios of interaction with the objects within the lesson \fig{objectDiagram}. 
 \begin{figure}[h]
@@ -167,7 +172,9 @@ The explicit garbage collection mechanism is illustrated with a Garbage Bin meta
 
 LOOP was used in university courses and job trainings to put in practice the concepts of polymorfism, object composition and delegation from the start.  Afterwards, the concepts tought in the class was introduced as an alternative to build objects and share and extend their behavior without difficulties.
 
+\bigskip
 In UTN and UNQ object oriented courses where LOOP was used the students were already experienced with structured programming.  The visual environment helped them to face the learning process without trying to just match their previous knowledge.
+
 In object oriented job training for technologies like Smalltalk or Java, most of the trainees had few or no programming experience. Those courses demanded high quality training in a short time. Using LOOP intensively in the first lessons to introduce the paradigm, the transition to an specific programming language was faster than in previous courses. Also, the aspirants who used LOOP, showed a higher learning curve for other object-oriented technologies.
 
 \section{Conclusions}
