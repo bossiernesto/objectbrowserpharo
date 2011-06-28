@@ -27,6 +27,7 @@
 
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -37,7 +38,7 @@
 \titlebanner{banner above paper title}        % These are ignored unless
 \preprintfooter{short description of paper}   % 'preprint' option specified.
 
-\title{Title Text}
+\title{A programming environment supporting an instance-based introduction to OOP}
 \subtitle{}
 
 \authorinfo{Carla Griggio$^\dagger$ 
@@ -154,7 +155,16 @@ Carlos Lombardi and Leonardo Cesario collaborated in the first implementation of
 \appendix
 \section{Appendix Title}
 
-This is the text of the appendix, if you need one.
+This is the text of the appendix, if you need one. \ref{fig:objectBrowser}
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/objectBrowser.png}
+ % objectBrowser.png: 657x328 pixel, 72dpi, 23.17x11.57 cm, bb=0 0 657 328
+ \caption{ObjectBrowser}
+ \label{fig:objectBrowser}
+\end{figure}
+
 
 \acks
 
