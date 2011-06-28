@@ -56,7 +56,7 @@
 \maketitle
 
 \begin{abstract}
-This paper describes the features that a programming environment should have in order to help learning the object-oriented programming (OOP) paradigm and let students get the skills needed to build software using objects very quickly. This proposal is centered on providing graphical tools to help understand the concepts of the paradigm and let students create objects before they are presented the class concept \cite{Utti2010}. The object, message and reference concepts are considered of primary importance during the teaching process, allowing quick acquisition of both theory and practice of concepts such as delegation, polymorphism and composition [1].
+This paper describes the features that a programming environment should have in order to help learning the object-oriented programming (OOP) paradigm and let students get the skills needed to build software using objects very quickly. This proposal is centered on providing graphical tools to help understand the concepts of the paradigm and let students create objects before they are presented the class concept \cite{Utti10}. The object, message and reference concepts are considered of primary importance during the teaching process, allowing quick acquisition of both theory and practice of concepts such as delegation, polymorphism and composition \cite{Lomb07}.
 
 
 Additionally, a current implementation of the proposed software and the experience gained so far using it for teaching at universities and work trainings. Finally, we describe possible extensions to the proposed software that are currently under study.
@@ -74,9 +74,9 @@ Educational programming environments, object-oriented programming, teaching meth
 
 \section{Introduction}
 
-Frequently, in introductory courses to OOP, students come with prior programming experience. This is often counter-productive when understanding some of the basic concepts of the OOP paradigm, such as the relationship between a class and its instances, the difference between object and reference, delegation and polymorphism [11]. In order to minimize this difficulty, a possible strategy is to postpone the introduction of the class concept. This reduces the set of concepts needed to build programs [1]. 
+Frequently, in introductory courses to OOP, students come with prior programming experience. This is often counter-productive when understanding some of the basic concepts of the OOP paradigm, such as the relationship between a class and its instances, the difference between object and reference, delegation and polymorphism \cite{Weir05}. In order to minimize this difficulty, a possible strategy is to postpone the introduction of the class concept. This reduces the set of concepts needed to build programs \cite{Lomb07}. 
 
-Similiar difficulties appear in students who do not have prior knowledge in programming at the time of learning OOP, and specially in those cases it is convinient to bring down any complexity that a language might have in order to understand the ideas the paradigm proposes [2].
+Similiar difficulties appear in students who do not have prior knowledge in programming at the time of learning OOP, and specially in those cases it is convinient to bring down any complexity that a language might have in order to understand the ideas the paradigm proposes \cite{Vent04}.
 
 To provide support to an introduction of OOP without working with the concept of class we believe it is necessary to have a programming environment in which the object and the message are the central concepts instead of defining classes and then instantiate them.
 Moreover, it has to offer facilities to understand the concepts of environment, state and garbage collection.
@@ -91,11 +91,11 @@ In order to introduce the concept of object environment we propose using lessons
 The use of lessons also aims to help students organize their work and let the teacher offer environments with pre-existing objects as scenarios for excercises.
 
 \subsection{Defining and using objects}
-We believe that a visual tool to create objects allows the student to build programs focusing on object use instead of object creation at the first stages of the learning process. We propose to work with a simplified prototype oriented environment [5, 10], where the objects contain their own methods without the need of classes; and the creation of objects, attributes and methods is performed through a visual approach. This simplified object-oriented programming environment allows students to build programs in a very early stage of the course with many collaborating objects and making use of polymorphism.
+We believe that a visual tool to create objects allows the student to build programs focusing on object use instead of object creation at the first stages of the learning process. We propose to work with a simplified prototype oriented environment \cite{Wilk02,Mads96}, where the objects contain their own methods without the need of classes; and the creation of objects, attributes and methods is performed through a visual approach. This simplified object-oriented programming environment allows students to build programs in a very early stage of the course with many collaborating objects and making use of polymorphism.
 
 Since the proposed environment lacks the concepts of classes or inheritance, the
 reuse of code is achieved by cloning objects. The cloning mechanism is simpler
-than those found in Self [4] or Javascript [5]. In those languages, tipically a
+than those found in Self \cite{Unga07} or Javascript \cite{Wilk02}. In those languages, tipically a
 prototypical object is divided in two parts, one containing the behavioral
 slots, which will be shared as a \textit{parent object} among all the cloned
 objects, and another part containing the ``state'' slots, which must be cloned every time a new object is created. In our proposal, the same object servers the two purposes: 
@@ -123,14 +123,14 @@ This tool makes it easier to get a clearer distinction between the concept of ob
 \subsection{Garbage Collection}
 
 Students usually want to erase an object from their system and find it odd not to have an explicit way to do so, e.g. sending a message delete, free or dealloc.
-In order to help understanding how the garbage collector works [7], we propose using an explicit mechanism of garbage collection to clarify the conditions that make an object likely to be collected. This way, students are able to observe which objects can be erased and give the explicit order to do so.
+In order to help understanding how the garbage collector works \cite{Hert05}, we propose using an explicit mechanism of garbage collection to clarify the conditions that make an object likely to be collected. This way, students are able to observe which objects can be erased and give the explicit order to do so.
 The proposed approach is centered on using the object diagram to illustrate the different stages an object goes through until it is collected. Once an object is not referenced by any other object, it should not disappear of the environment automatically, and in the object diagram it should appear isolated from the rest of the lesson's object graph, standing out as an object likely to be collected. This way, the student can see clearly that there are no references pointing to it. A garbage collection can be explicitly run at any time removing every unreferenced object from the lesson's environment and the object diagram as well.
 
 \section{Implementations}
 
-The first implementation of a tool based on the proposed style was an add-on for the Dolphin Smalltalk\footnote{Object Arts Dolphin Smalltalk: http://www.object-arts.com/} environment which allowed the creation of objects without using classes and had a workspace to interact with them [1].  We used that first implementation to put in practice the idea of delaying the introduction of the class concept, and it was also useful as a model for the next implementations.
+The first implementation of a tool based on the proposed style was an add-on for the Dolphin Smalltalk\footnote{Object Arts Dolphin Smalltalk: http://www.object-arts.com/} environment which allowed the creation of objects without using classes and had a workspace to interact with them \cite{Lomb07}.  We used that first implementation to put in practice the idea of delaying the introduction of the class concept, and it was also useful as a model for the next implementations.
 
-Nowadays, there is a new version of that tool built on top of Pharo Smalltalk\footnote{Pharo Smalltalk: http://www.pharo-project.org/} named LOOP  (Learning Object Oriented Programming) implementing the first versions of the features described above [18].
+Nowadays, there is a new version of that tool built on top of Pharo Smalltalk\footnote{Pharo Smalltalk: http://www.pharo-project.org/} named LOOP  (Learning Object Oriented Programming) implementing the first versions of the features described above \cite{Lomb07}.
 The main menu of LOOP is a Lesson Browser [Figure 1], where lessons can be created, opened, deleted, exported to a file for sharing and imported back in the Pharo image. Exporting and importing a lesson is very useful for the teacher to evaluate excercises done by the students and also give them prebuilt lessons.
 To create objects and references inside a lesson, the user has to use the object browser, which shows every reference and object created in the lesson environment. Selecting a reference from the menu brings up the object inspection window for the object that it points to, where the user can browse and define its attributes and methods [Figure 2]. 
 The user can define many workspaces with different scenarios of interaction with the objects within the lesson [Figure 3].
@@ -158,13 +158,10 @@ The current implementation of LOOP offers a limited support for developing unit 
 
 We also consider improving both appearance and functionality of the graphical diagrams of LOOP [Figure 3]. Object diagrams should be interactive, allowing the creation of new objects or sending messages from the diagram itself, as an alternative to the workspace and the reference-panel [Figure 2]. Also, sequence and collaboration diagrams would be useful for the comprehension of the dynamic relationships between objects. This kind of diagrams could be inferred from the evaluation of any piece of code, even the execution of tests.
 
-Another subject of research is a ``debugger'' for the tool [8]. We think that a live and powerful debugger \textit{à la Smalltalk} is a rich tool for the understanding of the whole environment behaviour. 
+Another subject of research is a ``debugger'' for the tool \cite{Benn10}. We think that a live and powerful debugger \textit{à la Smalltalk} is a rich tool for the understanding of the whole environment behaviour. 
 After a message is sent, a debugger view can be used like a video player, with play, forward and  backward buttons to navigate the message stack and see how the state changes after each message send in the object diagram.
 
 Finally, there are some improvements to be made to the user interface, such as shortcuts, code completion, improved menues or internationalization. Currently the tool is only available in spanish, we want to make it configurable to add more languages as necessary.
-
-\section{Acknowledgments}
-Carlos Lombardi and Leonardo Cesario collaborated in the first implementation of the programming environment. Also, many of the teachers and students of the subjects of \textit{Programming Paradigms} at UTN and \textit{Computers II} at UNQ gave us great help by testing our tools, reporting bugs and proposing new ideas. Gabriela Arévalo and Victoria Griggio helped us in the writing of this paper.
 
 \appendix
 \section{Figures}
@@ -182,7 +179,8 @@ This is the text of the appendix, if you need one. \ref{fig:objectBrowser}
 
 \acks
 
-Acknowledgments, if needed.
+Carlos Lombardi and Leonardo Cesario collaborated in the first implementation of the programming environment. Also, many of the teachers and students of the subjects of \textit{Programming Paradigms} at UTN and \textit{Computers II} at UNQ gave us great help by testing our tools, reporting bugs and proposing new ideas. Gabriela Arévalo and Victoria Griggio helped us in the writing of this paper.
+
 
 % We recommend abbrvnat bibliography style.
 
