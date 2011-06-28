@@ -6,6 +6,7 @@
 
 \begin{document}
 \newcommand{\fig}[1]{(fig. \ref{fig:#1})}
+\newcommand{\figg}[2]{(fig. \ref{fig:#1}, \ref{fig:#2})}
 
 \conferenceinfo{ESUG '05}{August 22nd 2011, Edimburgh.} 
 \copyrightyear{2011} 
@@ -109,21 +110,58 @@ The proposed approach is centered on using the object diagram to illustrate the 
 The first implementation of a tool based on the proposed style was an add-on for the Dolphin Smalltalk\footnote{Object Arts Dolphin Smalltalk: http://www.object-arts.com/} environment which allowed the creation of objects without using classes and had a workspace to interact with them \cite{Lomb07}.  We used that first implementation to put in practice the idea of delaying the introduction of the class concept, and it was also useful as a model for the next implementations.
 
 Nowadays, there is a new version of that tool built on top of Pharo Smalltalk\footnote{Pharo Smalltalk: http://www.pharo-project.org/} named LOOP  (Learning Object Oriented Programming) implementing the first versions of the features described above \cite{Lomb07}.
-The main menu of LOOP is a Lesson Browser \fig{lessonBrowser}, where lessons can be created, opened, deleted, exported to a file for sharing and imported back in the Pharo image. Exporting and importing a lesson is very useful for the teacher to evaluate excercises done by the students and also give them prebuilt lessons.
+The main menu of LOOP is a Lesson Browser \fig{figure1}, where lessons can be created, opened, deleted, exported to a file for sharing and imported back in the Pharo image. Exporting and importing a lesson is very useful for the teacher to evaluate excercises done by the students and also give them prebuilt lessons.
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/lessonBrowser.png}
+ \caption{Lesson Browser}
+ \label{fig:objectBrowser}
+\end{figure}
 
 To create objects and references inside a lesson, the user has to use the object browser, which shows every reference and object created in the lesson environment. Selecting a reference from the menu brings up the object inspection window for the object that it points to, where the user can browse and define its attributes and methods \fig{objectBrowser}. 
-
 \begin{figure}[h]
  \centering
  \includegraphics[scale=.35]{./images/objectBrowser.png}
- % objectBrowser.png: 657x328 pixel, 72dpi, 23.17x11.57 cm, bb=0 0 657 328
  \caption{ObjectBrowser}
  \label{fig:objectBrowser}
 \end{figure}
 
-A live object diagram shows the state of a lesson’s environment and it is updated after every action that affects the environment state, i.e. addition or deletion of attributes of an object, message sends with side effects, creation of new objects, garbage collection, etc. [Figure 3].
-The user can define many workspaces with different scenarios of interaction with the objects within the lesson [Figure 4]. 
-The explicit garbage collection mechanism is illustrated with a Garbage Bin metaphore. Candidates for collection can be easily found in the object diagram because they would have no arrows pointing at them, and the Garbage Bin lists those same unreferenced objects [Figure 5]. When the Garbage Bin is emptied, those unreferenced objects are deleted from the environment and dissappear from the object diagram [Figure 6].
+A live object diagram shows the state of a lesson’s environment and it is updated after every action that affects the environment state, i.e. addition or deletion of attributes of an object, message sends with side effects, creation of new objects, garbage collection, etc. \fig{workspace}.
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/workspace.png}
+ \caption{Interacting with objects from a workspace}
+ \label{fig:workspace}
+\end{figure}
+
+
+The user can define many workspaces with different scenarios of interaction with the objects within the lesson \fig{objectDiagram}. 
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/objectDiagram.png}
+ \caption{Object Diagram}
+ \label{fig:objectDiagram}
+\end{figure}
+
+The explicit garbage collection mechanism is illustrated with a Garbage Bin metaphore. Candidates for collection can be easily found in the object diagram because they would have no arrows pointing at them, and the Garbage Bin lists those same unreferenced objects \fig{deletingAReference}. When the Garbage Bin is emptied, those unreferenced objects are deleted from the environment and dissappear from the object diagram \figg{beforeGarbageCollection} {afterGarbageCollection}.
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/deletingAReference.png}
+ \caption{Deleting a reference}
+ \label{fig:deletingAReference}
+\end{figure}
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/beforeGarbageCollection.png}
+ \caption{Object environment before garbage collection}
+ \label{fig:beforeGarbageCollection}
+\end{figure}
+\begin{figure}[h]
+ \centering
+ \includegraphics[scale=.35]{./images/afterGarbageCollection.png}
+ \caption{Object environment after garbage collection}
+ \label{fig:afterGarbageCollection}
+\end{figure}
 
 \section{Experiences}
 
