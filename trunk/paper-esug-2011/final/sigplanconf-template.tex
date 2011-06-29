@@ -15,7 +15,7 @@
 \titlebanner{banner above paper title}        % These are ignored unless
 \preprintfooter{short description of paper}   % 'preprint' option specified.
 
-\title{A programming environment supporting an prototype-based introduction to OOP}
+\title{A programming environment supporting a prototype-based introduction to OOP}
 \subtitle{}
 
 \authorinfo{Carla Griggio$^\dagger$ 
@@ -118,7 +118,7 @@ This tool makes it easier to get a clearer distinction between the concept of ob
 
 When the student interacts with the objects from a workspace, the diagram shows the state changes while the program executes. This provides a live vision of what happens in the object environment after each message-send. 
 
-The visual representation of the objects and references in the environment and the ability to folow their changes along with the program execution improves the understanding of some important concepts of the paradigm: like references and object identity.
+The visual representation of the objects and references in the environment and the ability to follow their changes along with the program execution improves the understanding of some important concepts of the paradigm: like references and object identity.
 
 \subsection{Garbage Collection}
 
@@ -207,9 +207,9 @@ We also want to include a configurable type system. We think that explicit type 
 
 The current implementation of LOOP offers a limited support for developing unit tests. This part of the tool should be improved in order to facilitate the use of test-driven development (TDD) from the begining of the course. Since the nature of LOOP programming environment imposes some specific difficulties to build tests without side-effect, a concrete implementation of TDD inside of LOOP is still to be analyzed in depth.
 
-We also consider improving both appearance and functionality of the graphical diagrams of LOOP [Figure 3]. Object diagrams should be interactive, allowing the creation of new objects or sending messages from the diagram itself, as an alternative to the workspace and the reference-panel [Figure 2]. Also, sequence and collaboration diagrams would be useful for the comprehension of the dynamic relationships between objects. This kind of diagrams could be inferred from the evaluation of any piece of code, even the execution of tests.
+We also consider improving both appearance and functionality of the graphical diagrams of LOOP. Object diagrams should be interactive, allowing the creation of new objects or sending messages from the diagram itself, as an alternative to the workspace and the reference-panel. Also, sequence and collaboration diagrams would be useful for the comprehension of the dynamic relationships between objects. This kind of diagrams could be inferred from the evaluation of any piece of code, even the execution of tests.
 
-Another subject of research is a ``debugger'' for the tool \cite{Benn10}. We think that a live and powerful debugger \textit{Smalltalk style} is a rich tool for the understanding of the whole environment behaviour. 
+Another subject of research is a ``debugger'' for the tool \cite{Benn10}. We think that a live and powerful debugger \textit{à la Smalltalk} is a rich tool for the understanding of the whole environment behaviour. 
 After a message is sent, a debugger view can be used like a video player, with play, forward and  backward buttons to navigate the message stack and see how the state changes after each message send in the object diagram.
 
 Finally, there are some improvements to be made to the user interface, such as shortcuts, code completion, improved menues or internationalization. Currently the tool is only available in spanish, we want to make it configurable to add more languages as necessary.
