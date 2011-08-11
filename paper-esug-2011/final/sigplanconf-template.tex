@@ -64,7 +64,7 @@ Additionally, a current implementation of the proposed software and the experien
 Experimentation, Human Factors, Languages
 
 \keywords
-Educational programming environments, object-oriented programming, teaching methodologies, prototype-based, explicit garbage collection, objects visualization
+Educational programming environments, object-oriented programming, teaching methodologies, prototype-based, objects visualization
 
 \section{Introduction}
 
@@ -119,14 +119,6 @@ This tool makes it easier to get a clearer distinction between the concept of ob
 When the student interacts with the objects from a workspace, the diagram shows the state changes while the program executes. This provides a live vision of what happens in the object environment after each message-send. 
 
 The visual representation of the objects and references in the environment and the ability to follow their changes along with the program execution improves the understanding of some important concepts of the paradigm: like references and object identity.
-
-\subsection{Garbage Collection}
-
-Students usually want to erase an object from their system and find it odd not to have an explicit way to do so, e.g. sending a message delete, free or dealloc.
-
-In order to help understanding how the garbage collector works \cite{Hert05}, we propose using an explicit mechanism of garbage collection to clarify the conditions that make an object likely to be collected. This way, students are able to observe which objects can be erased and give the explicit order to do so.
-
-The proposed approach is centered on using the object diagram to illustrate the different stages an object goes through until it is collected. Once an object is not referenced by any other object, it should not disappear of the environment automatically, and in the object diagram it should appear isolated from the rest of the lesson's object graph, standing out as an object likely to be collected. This way, the student can see clearly that there are no references pointing to it. A garbage collection can be explicitly run at any time removing every unreferenced object from the lesson's environment and the object diagram as well.
 
 \section{Implementations}
 
