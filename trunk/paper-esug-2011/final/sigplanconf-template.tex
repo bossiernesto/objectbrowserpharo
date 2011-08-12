@@ -158,7 +158,7 @@ The user can define many workspaces with different scenarios of interaction with
  \label{fig:objectDiagram}
 \end{figure}
 
-The explicit garbage collection mechanism is illustrated with a Garbage Bin metaphore. Candidates for collection can be easily found in the object diagram because they would have no arrows pointing at them, and the Garbage Bin lists those same unreferenced objects \fig{deletingAReference}. When the Garbage Bin is emptied, those unreferenced objects are deleted from the environment and dissappear from the object diagram \figg{beforeGarbageCollection} {afterGarbageCollection}.
+An explicit garbage collection mechanism is illustrated with a Garbage Bin metaphore. Candidates for collection can be easily found in the object diagram because they would have no arrows pointing at them, and the Garbage Bin lists those same unreferenced objects \fig{deletingAReference}. When the Garbage Bin is emptied, those unreferenced objects are deleted from the environment and dissappear from the object diagram \figg{beforeGarbageCollection} {afterGarbageCollection}.
 \begin{figure}[h]
  \centering
  \includegraphics[scale=.35]{./images/deletingAReference.png}
@@ -186,9 +186,15 @@ In UTN and UNQ object oriented courses where LOOP was used the students were alr
 
 In object oriented job training for technologies like Smalltalk or Java, most of the trainees had few or no programming experience. Those courses demanded high quality training in a short time. Using LOOP intensively in the first lessons to introduce the paradigm, the transition to an specific programming language was faster than in previous courses. Also, the aspirants who used LOOP, showed a higher learning curve for other object-oriented technologies.
 
-\section{Related Work}
+\section{Discussion and Related Work}
 
-LOOP is presented as a visual environment to teach OOP using a few language constructions and a prototype approach to create objects.
+LOOP is presented as a visual environment to teach OOP using a reduced set of language constructions and a prototype approach to create objects.  It presents the main concepts of object, message and reference in a specialized tool with a visual representation of the object environment.
+
+ObjectKarel\cite{Findl02} presents a visual tool based on the abstraction of robots to teach OOP, using a map where the robots-the objets- move when messages are sent to them.  LOOP does not center on a specific abstraction like a robot: it allows the student to create any other abstraction.  Also, the visual approachs differ in what they want to show.  LOOP is mainly oriented to show an object environment, emphasizing the relations between the objets and their identity.  The state changes seen in ObjectKarel through a map, are seen in LOOP in the object references.
+
+Projects like Scratch\cite{} and Etoys\cite{Kay} on the other way, are aimed to teach the basics of programming to children, using visual objects and scripts to play with them.  LOOP differs from these project because it is mainly oriented to teach professional programming to people who wants to enter in the software industry.
+
+LOOP's prototype approach is mainly based on the ideas of Self \cite{Unga07} and Javascript \cite{Wilk02}, differing in some crucial points.  First, LOOP's model is more restrictive than the existing in Self, allowing only one parent for each object.  Second, the idea of parent slots/prototypes in LOOP is completely handled by the tool, whithout letting the student to manage them.  This way the transition from single prototyping to single inheritance is easier for the student when he faces a programming language like Java or Smalltalk, and it also let's him to focus on the concepts the tools wants to show -object, message, relations, polymorphism- instead of more complex ones -classes, inheritance, traits, mixins.
 
 \section{Conclusions}
 
@@ -295,6 +301,14 @@ I.~Michiels, A.~Fern\'{a}ndez, J.~B\"{o}rstler, and M.~Prieto.
 \newblock ISBN 3-540-41513-0.
 \newblock URL \url{http://portal.acm.org/citation.cfm?id=646780.705783}.
 
+\bibitem[Satratzemi et~al.(2003)Satratzemi, Xinogalos and Dagdilelis]{Satra03}
+M.~Satratzemi, S.~Xinogalos and V.~Dagdilelis.
+\newblock An Environment for Teaching Object-Oriented Programming: ObjectKarel
+\newblock In \emph{Proceedings of the The 3rd IEEE International Conference on Advanced Learning Technologies
+}, ICALT’03
+\newblock ISBN 0-7695-1967-9
+\newblock URL \url{http://portal.acm.org/citation.cfm?id=961590}.
+
 \bibitem[Shanmugasundaram et~al.(2006)Shanmugasundaram, Juell, and
   Hill]{Shan06}
 V.~Shanmugasundaram, P.~Juell, and C.~Hill.
@@ -342,6 +356,19 @@ P.~Ventura and B.~Ramamurthy.
 \newblock ISBN 1-58113-798-2.
 \newblock \doi{http://doi.acm.org/10.1145/971300.971387}.
 \newblock URL \url{http://doi.acm.org/10.1145/971300.971387}.
+
+http://portal.acm.org/citation.cfm?id=1858609
+
+\bibitem[Weir et~al.(2005)Weir, Vilner, Mendes, and Nordstr\"{o}m]{Weir05}
+G.~R.~S. Weir, T.~Vilner, A.~J. Mendes, and M.~Nordstr\"{o}m.
+\newblock Difficulties teaching java in cs1 and how we aim to solve them.
+\newblock In \emph{Proceedings of the 10th annual SIGCSE conference on
+  Innovation and technology in computer science education}, ITiCSE '05, pages
+  344--345, New York, NY, USA, 2005. ACM.
+\newblock ISBN 1-59593-024-8.
+\newblock \doi{http://doi.acm.org/10.1145/1067445.1067543}.
+\newblock URL \url{http://doi.acm.org/10.1145/1067445.1067543}.
+
 
 \bibitem[Weir et~al.(2005)Weir, Vilner, Mendes, and Nordstr\"{o}m]{Weir05}
 G.~R.~S. Weir, T.~Vilner, A.~J. Mendes, and M.~Nordstr\"{o}m.
