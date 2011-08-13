@@ -177,24 +177,43 @@ An explicit garbage collection mechanism is illustrated with a Garbage Bin metap
  \caption{Object environment after garbage collection}
  \label{fig:afterGarbageCollection}
 \end{figure}
+
 \section{Experiences}
 
 LOOP was used in university courses and job trainings to put in practice the concepts of polymorphism, object composition and delegation from the start.  Afterwards, the concepts tought in the class was introduced as an alternative to build objects and share and extend their behavior without difficulties.
 
 \bigskip
+In object oriented job trainings for technologies like Smalltalk or Java, most of the trainees had few or no programming experience. Those courses demanded high quality training in a short time. Using LOOP intensively in the first lessons to introduce the paradigm, the transition to an specific programming language was faster than in previous courses. Also, the aspirants who used LOOP, showed a higher learning curve for other object-oriented technologies.
+
 In UTN and UNQ object oriented courses where LOOP was used the students were already experienced with structured programming.  The visual environment helped them to face the learning process without trying to just match their previous knowledge.
 
-In object oriented job training for technologies like Smalltalk or Java, most of the trainees had few or no programming experience. Those courses demanded high quality training in a short time. Using LOOP intensively in the first lessons to introduce the paradigm, the transition to an specific programming language was faster than in previous courses. Also, the aspirants who used LOOP, showed a higher learning curve for other object-oriented technologies.
+In particular, we present the last 5 years results of the OOP exams from the Programming Paradigms course given by Fernando Dodino at UTN, where he used the actual implementation of LOOP in 2011 Q1.
+
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+Quarter & Approval Rate \\
+\hline
+2010 Q2 & 68.42\% \\
+2010 Q1 & 69.76\% \\
+2009 Q2 & 80.95\% \\
+2008 Q2 & 66.67\% \\
+2008 Q1 & 74.07\% \\
+2007 Q2 & 73.33\% \\
+2006 Q2 & 75.00\% \\
+\hline
+\end{tabular}
+
+\emph{Table 1.} Approval Rates
+\end{center}
 
 \section{Discussion and Related Work}
 
-LOOP is presented as a visual environment to teach OOP using a reduced set of language constructions and a prototype approach to create objects.  It presents the main concepts of object, message and reference in a specialized tool with a visual representation of the object environment.
+LOOP is presented as a visual environment to teach OOP using a reduced set of language constructions and a prototype approach to create objects.  It presents the main concepts of object, message and reference in a specialized tool with a visual representation of the object environment.  Several visual tools to teach programming already exists, like ObjectKarel\cite{Findl02}, Scratch\cite{Utti10} and Etoys\cite{Kay05}.
 
-ObjectKarel\cite{Findl02} presents a visual tool based on the abstraction of robots to teach OOP, using a map where the robots-the objets- move when messages are sent to them.  LOOP does not center on a specific abstraction like a robot: it allows the student to create any other abstraction.  Also, the visual approachs differ in what they want to show.  LOOP is mainly oriented to show an object environment, emphasizing the relations between the objets and their identity.  The state changes seen in ObjectKarel through a map, are seen in LOOP in the object references.
+ObjectKarel presents a visual tool based on the abstraction of robots to teach OOP, using a map where the robots-the objects- move when messages are sent to them.  LOOP does not center on a specific abstraction like a robot: it allows the student to create any other abstraction.  Scratch and Etoys, are aimed to teach the basics of programming to children, using visual objects and scripts to play with them.  These projects are mainly oriented to teach the basics of programming to novices or children, while LOOP focuses on teaching professional programming to people who wants to enter in the software industry.
 
-Projects like Scratch\cite{} and Etoys\cite{Kay} on the other way, are aimed to teach the basics of programming to children, using visual objects and scripts to play with them.  LOOP differs from these project because it is mainly oriented to teach professional programming to people who wants to enter in the software industry.
-
-LOOP's prototype approach is mainly based on the ideas of Self \cite{Unga07} and Javascript \cite{Wilk02}, differing in some crucial points.  First, LOOP's model is more restrictive than the existing in Self, allowing only one parent for each object.  Second, the idea of parent slots/prototypes in LOOP is completely handled by the tool, whithout letting the student to manage them.  This way the transition from single prototyping to single inheritance is easier for the student when he faces a programming language like Java or Smalltalk, and it also let's him to focus on the concepts the tools wants to show -object, message, relations, polymorphism- instead of more complex ones -classes, inheritance, traits, mixins.
+LOOP's prototype approach is mainly based on the ideas of Self \cite{Unga07} and Javascript \cite{Wilk02}, differing in some crucial points.  LOOP's model is more restrictive than the existing in Self, allowing only one parent for each object, focusing on the concepts the tools wants to show -object, message, relations, polymorphism- instead of other more complex ones -classes, inheritance, traits, mixins- existing in a full featured language.  The idea of parent slots/prototypes in LOOP is completely handled by the tool, whithout letting the student manage them.
 
 \section{Conclusions}
 
@@ -259,6 +278,13 @@ M.~Hertz and E.~D. Berger.
 \newblock ISBN 1-59593-031-0.
 \newblock \doi{http://doi.acm.org/10.1145/1094811.1094836}.
 \newblock URL \url{http://doi.acm.org/10.1145/1094811.1094836}.
+
+http://www.squeakland.org/resources/articles/article.jsp?id=1008
+\bibitem[Kay(2005)]{Kay05}
+A.~Kay
+\newblock Squeak Etoys authoring
+\newblock 2005-01-01.
+\newblock URL \url{http://www.vpri.org/pdf/rn2005001\_learning.pdf}.
 
 \bibitem[Kouznetsova(2007)]{Kouz07}
 S.~Kouznetsova.
