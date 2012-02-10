@@ -1,0 +1,13 @@
+#TeXlipse project settings
+#Mon Jun 27 21:32:08 GMT-04:00 2011
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=
+mainTexFile=sigplanconf-template.tex
+outputFile=sigplanconf-template.pdf
+langSpell=
+markDer=true
+srcDir=
