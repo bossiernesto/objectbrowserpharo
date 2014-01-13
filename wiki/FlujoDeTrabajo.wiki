@@ -6,6 +6,8 @@
 
 = Status de los Issues =
 
+Un issue es la "unidad mínima de trabajo". Ó sea, una tarea. Cada cosa que haya que hacer para el proyecto (sea codificar ó hacer otra cosa) tendrá un issue asociado. Para ver los tipos de issues, leer [TagsEnIssues]
+
 == Mientras están "Vivos" (opened) ==
 Al manejar issues, es necesario saber los posibles estados en los que puede vivir: 
 ||New                  || Ningun developer vio el Issue (puede ser que haya que cerrarlo -> ver "Para matarlos"). Si está todo bien, alguien debería pasarlo a Accepted ||
