@@ -34,7 +34,13 @@ Al manejar issues, es necesario saber los posibles estados en los que puede vivi
  * En la página del issue, hacer click en "Add a comment or make changes". En "Owner" poner el usuario, y en "Status" poner "Started".
  * Esto me permite avisar al resto que alguien está trabajando en el issue, y quién lo está haciendo. 
 == Resolver el Issue ==
- * Si es codificación, el issue probablemente tenga uno ó más commits asociados (versiones de Monticello). Al commitear las versiones, no olvidar *escribir el número de issue al que hacen referencia en los comments*.
+ * Hay que tener descargada la última versión de Ozono. 
+TODO
+ * Para conocer el modelo interno del Object Browser: 
+TODO (Guille está migrando la página de Ozono)
+ * Una vez que se hacen las modificaciones correspondientes, hay que utilizar Monticello para cargarlas al repo: [https://docs.google.com/document/d/1LLrTr17R5irLp947i8Zlc7HOa7PtX_tFvu9m5vNjvlE/edit Tutorial de Monticello]
+  * Cuidado, para Ozono hay que tener un usuario en SmalltalkHub, en el team "Uqbar"
+ * El issue probablemente tenga uno ó más commits asociados (versiones de Monticello). Al commitear las versiones, no olvidar *escribir el número de issue al que hacen referencia en los comments*.
 TODO
 == Cerrar el Issue ==
 TODO
