@@ -28,6 +28,8 @@ Al manejar issues, es necesario saber los posibles estados en los que puede vivi
  * En ésta página: https://code.google.com/p/objectbrowserpharo/issues/list
  * TODA tarea que se haga del proyecto, debe estar respaldada por un issue. Si no existe, crearlo, teniendo en cuenta esto: [TagsEnIssues].
  * Se debe elegir los issues que estén en estado "Accepted" ó "New" (ver arriba).
+ * Además, está bueno resolver issues que tengan una prioridad alta, ó pertenezcan al release actual (ver [TagsEnIssues]).
+ * Si se es principiante, está bueno elegir los issues con menor dificultad.
 == Ponerse como Owner del Issue, y pasarlo a Started  ==
  * En la página del issue, hacer click en "Add a comment or make changes". En "Owner" poner el usuario, y en "Status" poner "Started".
  * Esto me permite avisar al resto que alguien está trabajando en el issue, y quién lo está haciendo. 
