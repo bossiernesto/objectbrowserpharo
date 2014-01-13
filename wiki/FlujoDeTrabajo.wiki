@@ -1,5 +1,38 @@
 #summary Acá explicamos qué hay que hacer para solucionar un issue
 
-= Introduction =
+= Introducción =
 
-asdfasdf
+Ésto explica qué hay que tener en cuenta al ser desarrollador del proyecto. Es de cumplimiento necesario.
+
+= Status de los Issues =
+
+== Mientras están "Vivos" (opened) ==
+Al manejar issues, es necesario saber los posibles estados en los que puede vivir: 
+||New                  || Ningun developer vio el Issue (puede ser que haya que cerrarlo -> ver "Para matarlos"). Si está todo bien, alguien debería pasarlo a Accepted ||
+||Accepted             || El Issue lo revisó un developer. En el caso de un Bug, pasa a accepted cuando pudo ser reproducido el error ||
+||Started              || Estamos trabajando para su satisfacción. Al terminar de trabajar, puedo pasarlo a ReviewRequested ó a MergeNeeded (en caso de ser código) ó puede pasarse a Done (en caso de ser documentación) ||
+||ReviewRequested      || Cambios terminados, se necesita PeerReview. O sea, me gustaría que vean mi código porque no confío mucho en lo que hice, por más que ande ||
+||MergeNeeded          || Todavía nadie lo pasó a la versión estable. En cuanto se pase, el estado debe cambiar a Done ||
+
+== Para matarlos (closed) ==
+||Invalid              || This was not a valid issue report ||
+||Duplicate            || This report duplicates an existing issue ||
+||WontFix              || We decided to not take action on this issue ||
+||Done                 || Task completed ||
+||Verified             || DEPRECADO NO USAR ||
+
+= Flujo de Trabajo =
+== Elegir un issue ==
+ * En ésta página: https://code.google.com/p/objectbrowserpharo/issues/list
+ * TODA tarea que se haga del proyecto, debe estar respaldada por un issue. Si no existe, crearlo, teniendo en cuenta esto: [TagsEnIssues].
+ * Se debe elegir los issues que estén en estado "Accepted" ó "New" (ver arriba).
+== Ponerse como Owner del Issue, y pasarlo a Started  ==
+ * En la página del issue, hacer click en "Add a comment or make changes". En "Owner" poner el usuario, y en "Status" poner "Started".
+ * Esto me permite avisar al resto que alguien está trabajando en el issue, y quién lo está haciendo. 
+== Resolver el Issue ==
+ * Si es codificación, el issue probablemente tenga uno ó más commits asociados (versiones de Monticello). Al commitear las versiones, no olvidar *escribir el número de issue al que hacen referencia en los comments*.
+TODO
+== Cerrar el Issue ==
+TODO
+== no sé qué más ==
+TODO
