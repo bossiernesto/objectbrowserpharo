@@ -27,22 +27,40 @@ Al manejar issues, es necesario saber los posibles estados en los que puede vivi
 == Elegir un issue ==
  * En ésta página: https://code.google.com/p/objectbrowserpharo/issues/list
  * TODA tarea que se haga del proyecto, debe estar respaldada por un issue. Si no existe, crearlo, teniendo en cuenta esto: [TagsEnIssues].
- * Se debe elegir los issues que estén en estado "Accepted" ó "New" (ver arriba).
+ * Se debe elegir los issues que estén en estado "Accepted".
  * Además, está bueno resolver issues que tengan una prioridad alta, ó pertenezcan al release actual (ver [TagsEnIssues]).
  * Si se es principiante, está bueno elegir los issues con menor dificultad.
 == Ponerse como Owner del Issue, y pasarlo a Started  ==
  * En la página del issue, hacer click en "Add a comment or make changes". En "Owner" poner el usuario, y en "Status" poner "Started".
  * Esto me permite avisar al resto que alguien está trabajando en el issue, y quién lo está haciendo. 
 == Resolver el Issue ==
+Si el issue es una tarea que no tiene que ver con codificación, sólo se resuelve ésta tarea y listo.
+Ahora, si el issue es de codificación:
+====Descargarse el código====
  * Hay que tener descargada la última versión de Ozono. 
-TODO
- * Para conocer el modelo interno del Object Browser: 
-TODO (Guille está migrando la página de Ozono)
+{{{
+Gofer it
+ smalltalkhubUser: 'Uqbar' project: 'Ozono';
+ configurationOf: 'ObjectBrowser';
+ loadVersion: #bleedingEdge
+}}}
+====Leer Documentación====
+ * Para conocer el modelo interno del Object Browser, por ahora la documentación está [https://sites.google.com/site/objectbrowsertool/documentacin-de-desarrollo acá]
+====Testear====
+ * Necesitamos mantener un test coverage interesante, así que el primer paso para desarrollar debería ser:
+  ** En un Bug, la máxima de Leo Gassman: "Si hay un Bug y sin embargo los tests están verdes, debemos hacer un test que pruebe que esto está fallando (que dé rojo) para que cuando lo arreglemos, dé verde"
+  ** En un Feature, no hace falta hacer TDD (aunque se puede). Pero sí hay que asegurarse de tener la nueva funcionalidad cubierta por tests.
+====Commitear los cambios====
  * Una vez que se hacen las modificaciones correspondientes, hay que utilizar Monticello para cargarlas al repo: [https://docs.google.com/document/d/1LLrTr17R5irLp947i8Zlc7HOa7PtX_tFvu9m5vNjvlE/edit Tutorial de Monticello]
-  * Cuidado, para Ozono hay que tener un usuario en SmalltalkHub, en el team "Uqbar"
- * El issue probablemente tenga uno ó más commits asociados (versiones de Monticello). Al commitear las versiones, no olvidar *escribir el número de issue al que hacen referencia en los comments*.
-TODO
+  * Cuidado, para commitear en el proyecto Ozono hay que tener un usuario en SmalltalkHub, en el team "Uqbar"
+ * Al commitear no olvidar poner en el comentario *el número de issue que se está resolviendo*.
 == Cerrar el Issue ==
+ * Cuando se pudo resolver un issue por completo, hay que ponerlo en status "MergeNeeded". Ésto le avisará a quien actualice las versiones que todavía el código no está disponible en la versión estable.
+ * Una vez que la versión estable se actualice, ya puede pasarse el issue a Done (esto hará que desaparezca de la lista de "Open").
+
+= Otros Flujos =
+== Revisar Issues en New ==
+ * Pasar a Accepted
 TODO
-== no sé qué más ==
+ * Pasar a los otros....
 TODO
