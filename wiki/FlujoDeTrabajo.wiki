@@ -14,7 +14,7 @@ Al manejar issues, es necesario saber los posibles estados en los que puede vivi
 ||Accepted             || El Issue lo revisó un developer. En el caso de un Bug, pasa a accepted cuando pudo ser reproducido el error ||
 ||Started              || Estamos trabajando para su satisfacción. Al terminar de trabajar, puedo pasarlo a ReviewRequested ó a MergeNeeded (en caso de ser código) ó puede pasarse a Done (en caso de ser documentación) ||
 ||ReviewRequested      || Cambios terminados, se necesita PeerReview. O sea, me gustaría que vean mi código porque no confío mucho en lo que hice, por más que ande ||
-||MergeNeeded          || Todavía nadie lo pasó a la versión estable. En cuanto se pase, el estado debe cambiar a Done ||
+||MergeNeeded          || DEPRECADO NO USAR. Todavía nadie lo pasó a la versión estable. En cuanto se pase, el estado debe cambiar a Done ||
 
 == Para matarlos (closed) ==
 ||Invalid              || This was not a valid issue report ||
@@ -55,8 +55,8 @@ Gofer it
   * Cuidado, para commitear en el proyecto Ozono hay que tener un usuario en SmalltalkHub, en el team "Uqbar"
  * Al commitear no olvidar poner en el comentario *el número de issue que se está resolviendo*.
 == Cerrar el Issue ==
- * Cuando se pudo resolver un issue por completo, hay que ponerlo en status "MergeNeeded". Ésto le avisará a quien actualice las versiones que todavía el código no está disponible en la versión estable.
- * Una vez que la versión estable se actualice, ya puede pasarse el issue a Done (esto hará que desaparezca de la lista de "Open").
+ * Cuando se pudo resolver un issue por completo, hay que ponerlo en status "ReviewRequested". La idea es que siempre haya otro que le pegue un vistazo a tu código antes de darlo por cerrado.
+ * Una vez que la versión estable se actualice, y se haya hecho peer review, ya puede pasarse el issue a Done (esto hará que desaparezca de la lista de "Open").
 
 = Otros Flujos =
 == Revisar Issues en New ==
